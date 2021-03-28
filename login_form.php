@@ -18,7 +18,7 @@
         <!-- パスワード -->
         <div>
             <label for="pass">pass.</label>
-            <input type="text" name="pass" id="pass" required>
+            <input type="text" name="pass" id="pass" autocomplete="off"　required>
         </div>
 
         <div>

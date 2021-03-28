@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-
 <?php
-
 // セッション開始宣言
-// session_start();
+session_start();
 // 入力した値を受け取る
 $name = $_POST['name'];
 $pass = $_POST['pass'];
@@ -28,19 +16,20 @@ try {
         $msg = $e->getMessage();
 }
 
-// 入力したnameのデータを呼び出してる？
+// 入力したnameのデータを呼び出してる
 $stmt = $pdo->prepare('SELECT * FROM user_table WHERE name = :name');
 $stmt->bindValue(':name', $name);
 $stmt->execute();
-$row = $stmt->fetch();
+$row = $stmt->fetch(); #入力したnameのrowを取り出す
+
 //中身確認 
-// var_dump($row['password']);
+// var_dump($_SESSION['name']);
 
 // tableのパスワードとマッチしているか
 if($pass == $row['password']) {
     // セッションにnameを保存
-    // $_SESSION['name'] = $member['name'];
-
+    $_SESSION['name'] = $row['name'];
+    
     $msg = "ログインしました";
     $link = "<a href=index.php>家計簿画面へ</a>"; 
 } else {
@@ -49,7 +38,19 @@ if($pass == $row['password']) {
 }
 ?>
 
+<!-- ここからブラウザ画面 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
 <h2><?= $msg?></h2>
 <div><?= $link?></div>
+
 </body>
 </html>
