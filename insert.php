@@ -2,10 +2,9 @@
 // セッション開始宣言
 session_start();
 
-// 1.入力チェック(受信確認処理追加)
+// 1.入力チェック(受信確認処理)
 if(
     #変数に値がない or　空の値がセットされているとき
-    // !isset($_POST["name"]) || $_POST["name"] =="" || 
     !isset($_POST["balance"]) || $_POST["balance"] =="" ||
     !isset($_POST["item"]) || $_POST["item"] ==""||
     !isset($_POST["howmuch"]) || $_POST["howmuch"] ==""    
@@ -21,9 +20,10 @@ $item = $_POST["item"];
 $howmuch = $_POST["howmuch"];
 
 
-// 3.DBに接続して、値を登録
+// 3.DBに接続
+$dsn = 'mysql:dbname=hha_db;charset=utf8;host=localhost'; #データソースネーム
 try {
-    $pdo = new PDO('mysql:dbname=hha_db;charset=utf8;host=localhost', 'root', 'root');
+    $pdo = new PDO($dsn, 'root', 'root');
 } catch (PDOException $e) {
     exit('DbConnectError:'.$e->getMessage());
 }
@@ -38,8 +38,6 @@ $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->bindValue(':balance', $balance, PDO::PARAM_STR);  
 $stmt->bindValue(':item', $item, PDO::PARAM_STR);  
 $stmt->bindValue(':howmuch', $howmuch, PDO::PARAM_STR);  
-
-var_dump($stmt);
 
 // dbに入れる。（実行= execute）
 $status = $stmt->execute();

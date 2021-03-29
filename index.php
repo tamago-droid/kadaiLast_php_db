@@ -1,3 +1,10 @@
+<?php
+// セッション開始宣言
+session_start();
+
+$name = $_SESSION["name"];
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>家計簿</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!-- ここからheader -->
@@ -12,7 +20,9 @@
     <nav>
         <a href="expenses.php">すべての支出</a>
         <a href="incomes.php">すべての収入</a>
+        <a href="logout.php">ログアウト</a>
     </nav>
+    <p><?= $name ?>さん、おつかれさまです ;)</p>
 </header>
 <!-- headerここまで -->
 
@@ -21,7 +31,6 @@
 <form action="insert.php" method="post">
     <fieldset>
         <legend>入力する</legend>
-        <!-- <label>名前：<input type="text" name="name" required></label> -->
 
         <label>
             <select name="balance" id="">
@@ -42,7 +51,7 @@
             </select>
         </label>
 
-        <label>金額：<input type="text" name="howmuch" required></label>
+        <label>金額：<input type="number" name="howmuch" required></label>
 
         <div>
             <input type="submit" value="送信する">
