@@ -30,10 +30,15 @@ $id = $_GET["id"];
 
 <!-- ここからmain -->
 <h1>家計簿</h1>
+<!-- 前ページに戻る -->
+<a href="javascript:history.back();">一覧に戻る</a>
+
 <form action="update.php" method="post">
     <fieldset>
         <legend>データを編集する</legend>
+        
         <label>ID：<input type="text" name="id" value="<?php echo $id ?>" readonly></label>
+
         <label>
             <select name="balance">
                 <option value="支出">支出</option>
