@@ -31,6 +31,7 @@ if($status == false) {
         "<td>".$result['item']."</td>".
         "<td>".$result['howmuch']."</td>".
         "<td>"."<a href=delete_ex.php?id=" . $result['id'] . ">削除</a>"."</td>".
+        "<td>"."<a href=update_form.php?id=" . $result['id'] . ">編集</a>"."</td>".
         "</tr>";
     
     }
@@ -51,7 +52,6 @@ try{
 }
 
 ?>
-
 
 
 <!DOCTYPE html>
@@ -76,6 +76,7 @@ try{
 <!-- headerここまで -->
 
 <!-- ここからmain -->
+<h1>家計簿</h1>
 <h2>すべての支出</h2>
 
 <table border="1">

@@ -18,7 +18,7 @@ try{
 $stmt = $pdo->prepare('SELECT * FROM user_table WHERE name = :name');
 $stmt->bindValue(':name', $name);
 $stmt->execute();
-$row = $stmt->fetch(); #入力したnameのrowを取り出す
+$row = $stmt->fetch(PDO::FETCH_ASSOC); #入力したnameのレコードを取り出す
 
 
 // 4.tableのパスワードとマッチしているか

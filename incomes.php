@@ -30,6 +30,7 @@ if($status == false) {
         "<td>".$result['item']."</td>".
         "<td>".$result['howmuch']."</td>".
         "<td>"."<a class='btn_dlt' href=delete_in.php?id=" . $result['id'] . ">削除</a>"."</td>".
+        "<td>"."<a href=update_form.php?id=" . $result['id'] . ">編集</a>"."</td>".
         "</tr>";
     
     }
@@ -60,6 +61,7 @@ if($status == false) {
 <!-- headerここまで -->
 
 <!-- ここからmain -->
+<h1>家計簿</h1>
 <h2>すべての収入</h2>
 <table border="1">
     <thead>

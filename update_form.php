@@ -1,8 +1,10 @@
 <?php
 // セッション開始宣言
 session_start();
-
 $name = $_SESSION["name"];
+
+// 選択したレコードのidを受け取る
+$id = $_GET["id"];
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +13,7 @@ $name = $_SESSION["name"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>家計簿</title>
+    <title>データ編集</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,10 +30,10 @@ $name = $_SESSION["name"];
 
 <!-- ここからmain -->
 <h1>家計簿</h1>
-<form action="insert.php" method="post">
+<form action="update.php" method="post">
     <fieldset>
-        <legend>入力する</legend>
-
+        <legend>データを編集する</legend>
+        <label>ID：<input type="text" name="id" value="<?php echo $id ?>" readonly></label>
         <label>
             <select name="balance">
                 <option value="支出">支出</option>
@@ -54,7 +56,7 @@ $name = $_SESSION["name"];
         <label>金額：<input type="number" name="howmuch" required></label>
 
         <div>
-            <input type="submit" value="送信する">
+            <input type="submit" value="更新する">
             <input type="reset" value="入力をリセットする">
         </div>
     </fieldset>
