@@ -30,9 +30,6 @@ try {
 $stmt = $pdo->prepare("UPDATE money_table SET balance=:balance, item =:item,
 howmuch=:howmuch WHERE id=:id");
 
-// $stmt = $pdo->prepare("INSERT INTO money_table(id, name, balance, item, howmuch,
-// indate )VALUES(NULL, :name, :balance, :item, :howmuch, sysdate())");
-
 // バインド変数に変数を入れる（「:変数名」=bind変数）、次に文字列or数値か。
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $stmt->bindValue(':balance', $balance, PDO::PARAM_STR);  

@@ -30,7 +30,7 @@ if($status == false) {
         "<td>".$result['name']."</td>".
         "<td>".$result['item']."</td>".
         "<td>".$result['howmuch']."</td>".
-        "<td>"."<a href=delete_ex.php?id=" . $result['id'] . ">削除</a>"."</td>".
+        "<td>"."<a class='btn_dlt' href=ex_delete.php?id=" . $result['id'] . ">削除</a>"."</td>".
         "<td>"."<a href=update_form.php?id=" . $result['id'] . ">編集</a>"."</td>".
         "</tr>";
     
@@ -62,39 +62,46 @@ try{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>支出履歴</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 </head>
 <body>
  <!-- ここからheader -->
 <header>
+    <p><?= $name ?>さん、おつかれさま ;)</p>
     <nav>
         <a href="index.php">新規入力</a>
         <a href="incomes.php">すべての収入</a>
         <a href="logout.php">ログアウト</a>
     </nav>
-    <p><?= $name ?>さん、おつかれさまです ;)</p>
 </header>
 <!-- headerここまで -->
 
 <!-- ここからmain -->
-<h1>家計簿</h1>
-<h2>すべての支出</h2>
-
-<table border="1">
-    <thead>
-        <tr>
-            <th>日付</th>
-            <th>名前</th>
-            <th>項目</th>
-            <th>金額</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?= $view ?>
-    </tbody>
-
-
-</table>
-
+<div class="theme">
+    <h1>HOUSEHOLD ACCOUNT</h1>
+</div>
+<div class="theme2">
+    <h2>すべての支出</h2>
+</div>
+<div class="table ex">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>日付</th>
+                <th>名前</th>
+                <th>項目</th>
+                <th>金額</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?= $view ?>
+        </tbody>
+        
+    </table>
+</div>
+    
 <!-- mainここまで -->
 
 </body>

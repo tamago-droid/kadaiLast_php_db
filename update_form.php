@@ -15,38 +15,44 @@ $id = $_GET["id"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>データ編集</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- ここからheader -->
 <header>
+    <p><?= $name ?>さん、おつかれさま ;)</p>
     <nav>
         <a href="expenses.php">すべての支出</a>
         <a href="incomes.php">すべての収入</a>
         <a href="logout.php">ログアウト</a>
     </nav>
-    <p><?= $name ?>さん、おつかれさまです ;)</p>
 </header>
 <!-- headerここまで -->
 
 <!-- ここからmain -->
-<h1>家計簿</h1>
+<div class="theme">
+    <h1>HOUSEHOLD ACCOUNT</h1>
+</div>
 <!-- 前ページに戻る -->
-<a href="javascript:history.back();">一覧に戻る</a>
-
+<div class="theme2">
+    <a href="javascript:history.back();">一覧に戻る</a>
+    <h2>データを編集する</h2>
+</div>
 <form action="update.php" method="post">
     <fieldset>
-        <legend>データを編集する</legend>
         
-        <label>ID：<input type="text" name="id" value="<?php echo $id ?>" readonly></label>
-
-        <label>
+        <label>ID：<input type="text" class="id" name="id" value="<?php echo $id ?>" readonly></label>
+        
+        <label>収支：
             <select name="balance">
                 <option value="支出">支出</option>
                 <option value="収入">収入</option>
             </select>
         </label>
+        
 
-        <label>
+        <label>項目名：
             <select name="item">
                 <option value="食費">食費</option>
                 <option value="水道光熱費">水道光熱費</option>

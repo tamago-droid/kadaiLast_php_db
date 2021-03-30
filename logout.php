@@ -14,9 +14,14 @@ session_destroy(); #セッションを破壊
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログアウト</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 </head>
 <body>
-<h2>ログアウトしました</h2>
-<a href="login_form.php">ログインページへ</a>  
+<h1>You are Logged out!</h1>
+<div class="theme2">
+    <a href="login_form.php">ログインページへ</a>  
+</div>
 </body>
 </html>

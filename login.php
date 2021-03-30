@@ -26,10 +26,10 @@ if($pass == $row['password']) {
     // セッションにnameを保存
     $_SESSION['name'] = $row['name'];
     
-    $msg = "ログインしました";
+    $msg = '<h1>You are logged in !</h1>';
     $link = "<a href='index.php'>家計簿画面へ</a>"; 
 } else {
-    $msg = "name.かpass.が間違っています";
+    $msg = '<h1>name or pass cannot be recognized ;(</h1>';
     $link = "<a href='login_form.php'>戻る</a>";
 }
 ?>
@@ -43,11 +43,15 @@ if($pass == $row['password']) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン結果</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<h2><?= $msg?></h2>
-<div><?= $link?></div>
+<div class="cmt"><?= $msg?></div>
+
+<div class="theme2"><?= $link?></div>
 
 </body>
 </html>
