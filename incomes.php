@@ -68,10 +68,12 @@ if($status == false) {
 <div class="theme">
     <h1>HOUSEHOLD ACCOUNT</h1>
 </div>
+
 <div class="theme2">
     <h2><i class="fa fa-th-list "></i> すべての収入</h2>
 </div>
 
+<!-- 収入一覧 -->
 <div clas="table in">
     <table border="1">
         <thead>
@@ -89,12 +91,14 @@ if($status == false) {
     </table>
 </div>
 
+<!-- トップに戻るボタン -->
 <a href="#" class="top_btn"><i class="fa fa-angle-double-up fa-4x"></i> </a>  
 <!-- mainここまで -->
 
-<!-- jquery -->
+<!-- jquery読み込み-->
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<!-- js -->
+
+<!-- js読み込み-->
 <script type="text/javascript" src="top_btn.js"></script>
 
 </body>

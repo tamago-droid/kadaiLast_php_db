@@ -1,6 +1,7 @@
 <?php
 // セッション開始宣言
 session_start();
+
 //1. POST値を受け取る
 $name = $_POST['name'];
 $pass = $_POST['pass'];
@@ -34,6 +35,7 @@ if($pass == $row['password']) {
 }
 ?>
 
+
 <!-- ここからブラウザ画面 -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -50,7 +52,6 @@ if($pass == $row['password']) {
 <body>
 
 <div class="cmt"><?= $msg?></div>
-
 <div class="theme2"><?= $link?></div>
 
 </body>

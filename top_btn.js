@@ -1,7 +1,8 @@
 $(function(){ 
-    //トップに戻るボタンの表示を変える処理
     var topbtn = $('.top_btn');   
     topbtn.hide(); //デフォルトで非表示
+    
+    //ボタンの表示を変える処理
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) { //100pxスクロール以降から、トップに戻るボタン表示
             topbtn.fadeIn();
@@ -9,7 +10,8 @@ $(function(){
             topbtn.fadeOut();
         }
     });
-    // クリックイベント
+
+    // クリックイベントでトップに戻る処理
     topbtn.click(function () {
         $('body,html').animate({
             scrollTop: 0

@@ -35,14 +35,18 @@ $id = $_GET["id"];
 <div class="theme">
     <h1>HOUSEHOLD ACCOUNT</h1>
 </div>
-<!-- 前ページに戻る -->
+
 <div class="theme2">
+    <!-- 前ページに戻る -->
     <a href="javascript:history.back();">一覧に戻る</a>
     <h2><i class="fa fa-paint-brush "></i> データ編集する</h2>
 </div>
+
+<!-- 既存レコード編集欄 -->
 <form action="update.php" method="post">
     <fieldset>
-        
+
+        <!-- IDは変更できないようにreadonly入れる -->
         <label>ID：<input type="text" class="id" name="id" value="<?php echo $id ?>" readonly></label>
         
         <label>収支：
@@ -67,6 +71,7 @@ $id = $_GET["id"];
 
         <label>金額：<input type="number" name="howmuch" required></label>
 
+        <!-- 送信・リセットボタン -->
         <div>
             <input type="submit" value="更新する">
             <input type="reset" value="入力をリセットする">

@@ -2,10 +2,12 @@
 // セッション開始宣言
 session_start();
 
+// ログアウトの手順
 $_SESSION = array(); #セッションの中身をすべて削除
 session_destroy(); #セッションを破壊
 ?>
 
+<!-- ここからブラウザ画面 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -18,6 +20,7 @@ session_destroy(); #セッションを破壊
     <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
 </head>
+
 <body>
 <h1>You are Logged out!</h1>
 <div class="theme2">

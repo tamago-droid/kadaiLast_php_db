@@ -1,5 +1,5 @@
 <?php
-// 1.DB接続して、SQL送信
+//1.DB接続して、SQL送信
 $dsn = 'mysql:dbname=hha_db;charset=utf8;host=localhost'; #データソースネーム
 try{
     $pdo = new PDO($dsn, 'root', 'root');

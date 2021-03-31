@@ -87,6 +87,8 @@ try{
 <div class="theme2">
     <h2><i class="fa fa-th-list "></i> すべての支出</h2>
 </div>
+
+<!-- 支出一覧 -->
 <div class="table ex">
     <table border="1">
         <thead>
@@ -99,16 +101,19 @@ try{
         </thead>
         <tbody>
             <?= $view ?>
-        </tbody>
-        
+        </tbody>  
     </table>
 </div>
+
+<!-- トップに戻るボタン -->
 <a href="#" class="top_btn"><i class="fa fa-angle-double-up fa-4x"></i> </a>  
+
 <!-- mainここまで -->
 
-<!-- jquery -->
+<!-- jquery読み込み-->
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<!-- js -->
+
+<!-- js読み込み-->
 <script type="text/javascript" src="top_btn.js"></script>
 
 </body>

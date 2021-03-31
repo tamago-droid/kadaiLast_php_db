@@ -15,8 +15,10 @@
 <div class="theme2">
     <a href="javascript:history.back();">サインインに戻る</a>
 </div>
+<!-- 新規会員情報入力欄 -->
 <form action="signup.php" method="post">
     <fieldset>
+        
         <label>名前：
             <input type="text" name="name" autocomplete="off" required>
         </label>
@@ -28,6 +30,8 @@
         <label>パスワード：
             <input type="password" name="pass" required>
         </label>
+
+        <!-- 送信・リセットボタン -->
         <div>
             <input type="submit" value="Signup">
             <input type="reset" value="Reset">

@@ -16,23 +16,23 @@
     <a href="signup_form.php">新規登録はこちら</a>
 </div>
 
+<!-- ログイン入力欄 -->
 <form action="login.php" method="post">
     <fieldset>  
-        <!-- 登録ネーム -->
         <label for="name">名前：
             <input type="text" name="name" id="name" required>
         </label>
         
-        
-        <!-- パスワード -->
         <label for="pass">パスワード：
             <input type="password" name="pass" id="pass" required>
         </label>
         
+        <!-- 送信・リセットボタン -->
         <div>
             <input type="submit" value="Signin">
             <input type="reset" value="Reset">
-        </div>       
+        </div>   
+
     </fieldset>
 
 </form>

@@ -34,36 +34,40 @@ $name = $_SESSION["name"];
 <div class="theme">
     <h1>HOUSEHOLD ACCOUNT</h1>
 </div>
+
 <div class="theme2">
     <h2><i class="fa fa-paint-brush "></i> 入力する</h2>
 </div>
+
+<!-- 家計簿入力欄 -->
 <form action="insert.php" method="post" class="frm">
     <fieldset>
-    <label>収支：
-        <select name="balance">
-            <option value="支出">支出</option>
-            <option value="収入">収入</option>
-        </select>
-    </label>
-    
-    <label>項目：
-        <select name="item">
-            <option value="食費">食費</option>
-            <option value="水道光熱費">水道光熱費</option>
-            <option value="住居費">住居費</option>
-            <option value="日用雑費">日用雑費</option>
-            <option value="給与">給与</option>
-            <option value="ボーナス">ボーナス</option>
-            <option value="その他">その他</option>
-        </select>
-    </label>
-    
-    <label>金額：<input type="number" name="howmuch" required></label>
-    
-    <div>
-        <input type="submit" value="送信する">
-        <input type="reset" value="入力をリセットする">
-    </div>
+        <label>収支：
+            <select name="balance">
+                <option value="支出">支出</option>
+                <option value="収入">収入</option>
+            </select>
+        </label>
+
+        <label>項目：
+            <select name="item">
+                <option value="食費">食費</option>
+                <option value="水道光熱費">水道光熱費</option>
+                <option value="住居費">住居費</option>
+                <option value="日用雑費">日用雑費</option>
+                <option value="給与">給与</option>
+                <option value="ボーナス">ボーナス</option>
+                <option value="その他">その他</option>
+            </select>
+        </label>
+
+        <label>金額：<input type="number" name="howmuch" required></label>
+
+        <!-- 送信・リセットボタン -->
+        <div>
+            <input type="submit" value="送信する">
+            <input type="reset" value="入力をリセットする">
+        </div>
     </fieldset>
 </form> 
 <!-- mainここまで -->

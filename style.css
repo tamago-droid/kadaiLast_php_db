@@ -40,7 +40,7 @@ nav a{
 h1{
   font-family: 'New Tegomin', serif;
   font-size: 60px;
-  margin: 20px auto;
+  margin: 30px auto;
   text-align: center;
   color: #504646;
 }
@@ -57,6 +57,7 @@ h1{
 .theme2 h2{
   margin-bottom: 0;
 }
+
 .cmt{
   text-align: center;
 }
@@ -112,7 +113,7 @@ form{
 }
 
 
-/* 一覧表 */
+/* 一覧表（テーブル） */
 table{
   width: 45%;
   margin: 0 auto 70px;
@@ -121,8 +122,8 @@ table{
 
 table th, table td{
   padding: 5px;
-
 }
+
 
 /* inputボタン */
 input[type="submit"],input[type="reset"] {
@@ -141,12 +142,14 @@ input[type="submit"]:hover,input[type="reset"]:hover{
     background-color: #217ef0;
 }
 
+
 /* スピンボタン消す */
 input[type="number"]::-webkit-outer-spin-button, 
 input[type="number"]::-webkit-inner-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
 } 
+
 
 /* トップに戻るボタン */
 .top_btn{
