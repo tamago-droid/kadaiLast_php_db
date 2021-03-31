@@ -50,6 +50,7 @@ if($status == false) {
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
  <!-- ここからheader -->
@@ -68,7 +69,7 @@ if($status == false) {
     <h1>HOUSEHOLD ACCOUNT</h1>
 </div>
 <div class="theme2">
-    <h2>すべての収入</h2>
+    <h2><i class="fa fa-th-list "></i> すべての収入</h2>
 </div>
 
 <div clas="table in">
@@ -88,7 +89,13 @@ if($status == false) {
     </table>
 </div>
 
+<a href="#" class="top_btn"><i class="fa fa-angle-double-up fa-4x"></i> </a>  
 <!-- mainここまで -->
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<!-- js -->
+<script type="text/javascript" src="top_btn.js"></script>
 
 </body>
 </html>

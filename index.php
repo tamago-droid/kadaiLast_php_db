@@ -16,6 +16,7 @@ $name = $_SESSION["name"];
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 <!-- ここからheader -->
@@ -34,7 +35,7 @@ $name = $_SESSION["name"];
     <h1>HOUSEHOLD ACCOUNT</h1>
 </div>
 <div class="theme2">
-    <h2>入力する</h2>
+    <h2><i class="fa fa-paint-brush "></i> 入力する</h2>
 </div>
 <form action="insert.php" method="post" class="frm">
     <fieldset>

@@ -19,13 +19,13 @@
 <form action="login.php" method="post">
     <fieldset>  
         <!-- 登録ネーム -->
-        <label for="name">name.
+        <label for="name">名前：
             <input type="text" name="name" id="name" required>
         </label>
         
         
         <!-- パスワード -->
-        <label for="pass">pass.
+        <label for="pass">パスワード：
             <input type="password" name="pass" id="pass" required>
         </label>
         

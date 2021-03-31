@@ -17,6 +17,7 @@ $id = $_GET["id"];
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 <!-- ここからheader -->
@@ -37,7 +38,7 @@ $id = $_GET["id"];
 <!-- 前ページに戻る -->
 <div class="theme2">
     <a href="javascript:history.back();">一覧に戻る</a>
-    <h2>データを編集する</h2>
+    <h2><i class="fa fa-paint-brush "></i> データ編集する</h2>
 </div>
 <form action="update.php" method="post">
     <fieldset>
