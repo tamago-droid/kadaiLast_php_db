@@ -30,7 +30,7 @@ if($status == false) {
         "<td>".$result['name']."</td>".
         "<td>".$result['item']."</td>".
         "<td>".$result['howmuch']."</td>".
-        "<td>"."<a class='btn_dlt' href=ex_delete.php?id=" . $result['id'] . ">削除</a>"."</td>".
+        "<td>"."<a class='btn_dlt' href=ex_delete.php?id={$result["id"]} onclick=confirm('データを削除します。本当によろしいですか？')>削除</a>"."</td>".
         "<td>"."<a href=update_form.php?id=" . $result['id'] . ">編集</a>"."</td>".
         "</tr>";
     
